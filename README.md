@@ -2,6 +2,36 @@
 
 Este é um projeto Spring Boot que consome a API do ViaCEP para obter informações sobre um determinado CEP. A aplicação segue uma arquitetura limpa, organizando o código em camadas, e utiliza o Spring Framework para injeção de dependências, facilitando a manutenção e testabilidade.
 
+# Conceito de BFF
+
+por exemplo peguei essa api publica aqui `https://viacep.com.br/ws/01001000/json/`  , ela segue esse json 
+```
+{
+  "cep": "01001-000",
+  "logradouro": "Praça da Sé",
+  "complemento": "lado ímpar",
+  "bairro": "Sé",
+  "localidade": "São Paulo",
+  "uf": "SP",
+  "ibge": "3550308",
+  "gia": "1004",
+  "ddd": "11",
+  "siafi": "7107"
+}
+
+```
+
+ supondo q o front vai não vai precisar de tudo isso e na tela lá ele só vai imputar  isso aqui ...  
+ 
+  ```
+  "cep": "01001-000"
+   "logradouro": "Praça da Sé",
+  "complemento": "lado ímpar",
+  "bairro": "Sé",
+  "localidade": "São Paulo",
+  "uf": "SP",
+```
+
 ## Estrutura do Projeto
 
 O projeto está estruturado em várias camadas, seguindo os princípios da arquitetura limpa:
